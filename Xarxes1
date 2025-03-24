@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carles Costa</title>
+    <style>
+        /* Reset de marges i padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fons de la pàgina */
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            overflow: hidden;
+            background-size: cover;
+            animation: backgroundAnim 10s ease infinite;
+        }
+
+        /* Animació de fons per a efecte parallax */
+        @keyframes backgroundAnim {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        /* Contenidor central amb efecte */
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 60px 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            transition: transform 0.4s ease;
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estil del títol */
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+            margin-bottom: 25px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Efecte d'animació fade-in per al títol */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estil de la descripció */
+        p {
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: #e0e0e0;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out 0.5s forwards;
+        }
+
+        /* Efectes per a l'enllaç (botó) */
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 20px 40px;
+            background: #2575fc;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background: #6a11cb;
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        a:active {
+            transform: translateY(0);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Estils per a la galeria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding-top: 30px;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Carles Costa</h1>
+        <p>Un viatge de creativitat, passió i exploració. Aquesta pàgina representa només el començament d'una nova aventura, un espai ple d'oportunitats.</p>
+        <a href="#">Explora més</a>
+    </div>
+    </div>
+</body>
+</html>
